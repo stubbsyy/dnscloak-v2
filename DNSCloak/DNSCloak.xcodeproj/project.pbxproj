@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28B9A5A629B5D88F00E83E45 /* DNSCloakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5A529B5D88F00E83E45 /* DNSCloakApp.swift */; };
+		28B9A5A829B5D88F00E83E45 /* Blocklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5A729B5D88F00E83E45 /* Blocklist.swift */; };
+		28B9A5AA29B5D88F00E83E45 /* DNSResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5A929B5D88F00E83E45 /* DNSResolver.swift */; };
+		28B9A5AC29B5D88F00E83E45 /* DNSQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5AB29B5D88F00E83E45 /* DNSQuery.swift */; };
+		28B9A5AE29B5D88F00E83E45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5AD29B5D88F00E83E45 /* ContentView.swift */; };
+		28B9A5B029B5D88F00E83E45 /* BlocklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5AF29B5D88F00E83E45 /* BlocklistView.swift */; };
+		28B9A5B229B5D88F00E83E45 /* DNSResolverListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5B129B5D88F00E83E45 /* DNSResolverListView.swift */; };
+		28B9A5B429B5D88F00E83E45 /* DNSQueryLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5B329B5D88F00E83E45 /* DNSQueryLogView.swift */; };
+		28B9A5B629B5D88F00E83E45 /* BlocklistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5B529B5D88F00E83E45 /* BlocklistManager.swift */; };
+		28B9A5B829B5D88F00E83E45 /* DNSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5B729B5D88F00E83E45 /* DNSManager.swift */; };
+		28B9A5BA29B5D88F00E83E45 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5B929B5D88F00E83E45 /* Settings.swift */; };
+		28B9A5CB29B5D88F00E83E45 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5CA29B5D88F00E83E45 /* PacketTunnelProvider.swift */; };
+		28B9A5D529B5D88F00E83E45 /* DNSCloakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5D429B5D88F00E83E45 /* DNSCloakTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28B9A59E29B5D88F00E83E45 /* DNSCloak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNSCloak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B9A5A529B5D88F00E83E45 /* DNSCloakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSCloakApp.swift; sourceTree = "<group>"; };
+		28B9A5A729B5D88F00E83E45 /* Blocklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocklist.swift; sourceTree = "<group>"; };
+		28B9A5A929B5D88F00E83E45 /* DNSResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSResolver.swift; sourceTree = "<group>"; };
+		28B9A5AB29B5D88F00E83E45 /* DNSQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSQuery.swift; sourceTree = "<group>"; };
+		28B9A5AD29B5D88F00E83E45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		28B9A5AF29B5D88F00E83E45 /* BlocklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocklistView.swift; sourceTree = "<group>"; };
+		28B9A5B129B5D88F00E83E45 /* DNSResolverListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSResolverListView.swift; sourceTree = "<group>"; };
+		28B9A5B329B5D88F00E83E45 /* DNSQueryLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSQueryLogView.swift; sourceTree = "<group>"; };
+		28B9A5B529B5D88F00E83E45 /* BlocklistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocklistManager.swift; sourceTree = "<group>"; };
+		28B9A5B729B5D88F00E83E45 /* DNSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSManager.swift; sourceTree = "<group>"; };
+		28B9A5B929B5D88F00E83E45 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		28B9A5CA29B5D88F00E83E45 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		28B9A5D429B5D88F00E83E45 /* DNSCloakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSCloakTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		28B9A59D29B5D88F00E83E45 = {
+			isa = PBXGroup;
+			children = (
+				28B9A5A429B5D88F00E83E45 /* DNSCloak */,
+				28B9A5A329B5D88F00E83E45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28B9A5A329B5D88F00E83E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28B9A59E29B5D88F00E83E45 /* DNSCloak.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28B9A5A429B5D88F00E83E45 /* DNSCloak */ = {
+			isa = PBXGroup;
+			children = (
+                28B9A5A529B5D88F00E83E45 /* DNSCloakApp.swift */,
+                28B9A5A729B5D88F00E83E45 /* Blocklist.swift */,
+                28B9A5A929B5D88F00E83E45 /* DNSResolver.swift */,
+                28B9A5AB29B5D88F00E83E45 /* DNSQuery.swift */,
+                28B9A5AD29B5D88F00E83E45 /* ContentView.swift */,
+                28B9A5AF29B5D88F00E83E45 /* BlocklistView.swift */,
+                28B9A5B129B5D88F00E83E45 /* DNSResolverListView.swift */,
+                28B9A5B329B5D88F00E83E45 /* DNSQueryLogView.swift */,
+                28B9A5B529B5D88F00E83E45 /* BlocklistManager.swift */,
+                28B9A5B729B5D88F00E83E45 /* DNSManager.swift */,
+                28B9A5B929B5D88F00E83E45 /* Settings.swift */,
+			);
+			path = DNSCloak;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28B9A59F29B5D88F00E83E45 /* DNSCloak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B9A5C229B5D88F00E83E45 /* Build configuration list for PBXNativeTarget "DNSCloak" */;
+			buildPhases = (
+				28B9A59C29B5D88F00E83E45 /* Sources */,
+				28B9A59A29B5D88F00E83E45 /* Frameworks */,
+				28B9A59B29B5D88F00E83E45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNSCloak;
+			productName = DNSCloak;
+			productReference = 28B9A59E29B5D88F00E83E45 /* DNSCloak.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXNativeTarget section */
+		28B9A5D029B5D88F00E83E45 /* DNSCloakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B9A5D329B5D88F00E83E45 /* Build configuration list for PBXNativeTarget "DNSCloakTests" */;
+			buildPhases = (
+				28B9A5D129B5D88F00E83E45 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNSCloakTests;
+			productName = DNSCloakTests;
+			productReference = 28B9A5D229B5D88F00E83E45 /* DNSCloakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28B9A5A029B5D88F00E83E45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					28B9A59F29B5D88F00E83E45 = {
+						CreatedOnToolsVersion = 13.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 28B9A5A129B5D88F00E83E45 /* Build configuration list for PBXProject "DNSCloak" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28B9A59D29B5D88F00E83E45;
+			productRefGroup = 28B9A5A329B5D88F00E83E45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28B9A59F29B5D88F00E83E45 /* DNSCloak */,
+				28B9A5C629B5D88F00E83E45 /* DNSCloakPacketTunnel */,
+				28B9A5D029B5D88F00E83E45 /* DNSCloakTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXNativeTarget section */
+		28B9A5C629B5D88F00E83E45 /* DNSCloakPacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B9A5C929B5D88F00E83E45 /* Build configuration list for PBXNativeTarget "DNSCloakPacketTunnel" */;
+			buildPhases = (
+				28B9A5C729B5D88F00E83E45 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNSCloakPacketTunnel;
+			productName = DNSCloakPacketTunnel;
+			productReference = 28B9A5C829B5D88F00E83E45 /* DNSCloakPacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28B9A59C29B5D88F00E83E45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B9A5A629B5D88F00E83E45 /* DNSCloakApp.swift in Sources */,
+				28B9A5A829B5D88F00E83E45 /* Blocklist.swift in Sources */,
+				28B9A5AA29B5D88F00E83E45 /* DNSResolver.swift in Sources */,
+				28B9A5AC29B5D88F00E83E45 /* DNSQuery.swift in Sources */,
+				28B9A5AE29B5D88F00E83E45 /* ContentView.swift in Sources */,
+				28B9A5B029B5D88F00E83E45 /* BlocklistView.swift in Sources */,
+				28B9A5B229B5D88F00E83E45 /* DNSResolverListView.swift in Sources */,
+				28B9A5B429B5D88F00E83E45 /* DNSQueryLogView.swift in Sources */,
+				28B9A5B629B5D88F00E83E45 /* BlocklistManager.swift in Sources */,
+				28B9A5B829B5D88F00E83E45 /* DNSManager.swift in Sources */,
+				28B9A5BA29B5D88F00E83E45 /* Settings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B9A5C729B5D88F00E83E45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B9A5CB29B5D88F00E83E45 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B9A5D129B5D88F00E83E45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B9A5D529B5D88F00E83E45 /* DNSCloakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		28B9A5C129B5D88F00E83E45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DNSCloak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DNSCloak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28B9A5C329B5D88F00E83E45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DNSCloak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DNSCloak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28B9A5C429B5D88F00E83E45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		28B9A5C529B5D88F00E83E45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28B9A5A129B5D88F00E83E45 /* Build configuration list for PBXProject "DNSCloak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B9A5C129B5D88F00E83E45 /* Debug */,
+				28B9A5C329B5D88F00E83E45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28B9A5C229B5D88F00E83E45 /* Build configuration list for PBXNativeTarget "DNSCloak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B9A5C429B5D88F00E83E45 /* Debug */,
+				28B9A5C529B5D88F00E83E45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28B9A5A029B5D88F00E83E45 /* Project object */;
+}
