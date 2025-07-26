@@ -32,7 +32,7 @@ class BlocklistManager {
             .map { [weak self] data in
                 guard let self = self else { return [] }
                 let format = self.parser.detectFormat(data: data)
-                return self.parser.parse(data: data, format: format)
+                return self.parser.parse(data: data, format: format, limit: self.settings.blocklistLimit)
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()

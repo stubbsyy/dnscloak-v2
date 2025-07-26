@@ -22,6 +22,9 @@ class Settings: ObservableObject {
     @Published var updateInterval: UpdateInterval = .daily {
         didSet { saveSettings() }
     }
+    @Published var blocklistLimit: Int = 500000 {
+        didSet { saveSettings() }
+    }
 
     private let userDefaults: UserDefaults
 
@@ -52,6 +55,9 @@ class Settings: ObservableObject {
         }
         if let encoded = try? encoder.encode(updateInterval) {
             userDefaults.set(encoded, forKey: "updateInterval")
+        }
+        if let encoded = try? encoder.encode(blocklistLimit) {
+            userDefaults.set(encoded, forKey: "blocklistLimit")
         }
     }
 
@@ -84,6 +90,10 @@ class Settings: ObservableObject {
         if let data = userDefaults.data(forKey: "updateInterval"),
            let decoded = try? decoder.decode(UpdateInterval.self, from: data) {
             updateInterval = decoded
+        }
+        if let data = userDefaults.data(forKey: "blocklistLimit"),
+           let decoded = try? decoder.decode(Int.self, from: data) {
+            blocklistLimit = decoded
         }
     }
 }
