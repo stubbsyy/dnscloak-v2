@@ -6,16 +6,24 @@ struct DNSResolverListView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(settings.resolvers) { resolver in
-                    Button(action: {
-                        // Select this resolver
-                    }) {
-                        HStack {
-                            Text(resolver.name)
-                            Spacer()
-                            if resolver.isEnabled {
-                                Image(systemName: "checkmark")
+            ZStack {
+                if settings.resolvers.isEmpty {
+                    Text("No DNS resolvers.")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                } else {
+                    List {
+                        ForEach(settings.resolvers) { resolver in
+                            Button(action: {
+                                // Select this resolver
+                            }) {
+                                HStack {
+                                    Text(resolver.name)
+                                    Spacer()
+                                    if resolver.isEnabled {
+                                        Image(systemName: "checkmark")
+                                    }
+                                }
                             }
                         }
                     }

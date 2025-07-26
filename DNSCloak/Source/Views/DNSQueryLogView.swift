@@ -7,14 +7,22 @@ struct DNSQueryLogView: View {
 
     var body: some View {
         NavigationView {
-            List(settings.queries) { query in
-                Button(action: {
-                    selectedQuery = query
-                    showingActionSheet = true
-                }) {
-                    VStack(alignment: .leading) {
-                        Text(query.domain).font(.headline)
-                        Text(query.result).font(.subheadline)
+            ZStack {
+                if settings.queries.isEmpty {
+                    Text("No DNS queries yet.")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                } else {
+                    List(settings.queries) { query in
+                        Button(action: {
+                            selectedQuery = query
+                            showingActionSheet = true
+                        }) {
+                            VStack(alignment: .leading) {
+                                Text(query.domain).font(.headline)
+                                Text(query.result).font(.subheadline)
+                            }
+                        }
                     }
                 }
             }
