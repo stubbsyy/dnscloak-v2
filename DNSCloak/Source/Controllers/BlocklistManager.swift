@@ -23,12 +23,16 @@ class BlocklistManager {
 
     private let parser = BlocklistParser()
 
+    private let parser = BlocklistParser()
+
     func fetchBlocklist(from blocklist: Blocklist) -> AnyPublisher<Set<String>, BlocklistError> {
         URLSession.shared.dataTaskPublisher(for: blocklist.url)
             .mapError { BlocklistError.networkError($0) }
             .map(\.data)
             .map { [weak self] data in
-                self?.parser.parse(data: data, format: blocklist.format) ?? []
+                guard let self = self else { return [] }
+                let format = self.parser.detectFormat(data: data)
+                return self.parser.parse(data: data, format: format)
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
