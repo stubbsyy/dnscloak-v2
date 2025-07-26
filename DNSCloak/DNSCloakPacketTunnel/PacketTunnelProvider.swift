@@ -4,6 +4,7 @@ import os.log
 class PacketTunnelProvider: NEPacketTunnelProvider {
     let logger = OSLog(subsystem: "com.example.DNSCloak.PacketTunnel", category: "PacketTunnel")
     var dnsProxy: DNSProxy?
+    var systemDNSServers: [String] = []
 
     override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
         let tunnelNetworkSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: "8.8.8.8")
@@ -15,8 +16,11 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
                 completionHandler(error)
                 return
             }
+
+            self?.systemDNSServers = (self?.packetFlow.getRoute().dnsServers) ?? []
+
             let settings = Settings(appGroup: "group.com.example.DNSCloak")
-            self?.dnsProxy = DNSProxy(settings: settings)
+            self?.dnsProxy = DNSProxy(settings: settings, systemDNSServers: self?.systemDNSServers ?? [])
             completionHandler(nil)
             self?.readPackets()
         }
