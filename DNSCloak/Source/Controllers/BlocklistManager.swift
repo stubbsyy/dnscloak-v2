@@ -4,9 +4,21 @@ import Combine
 class BlocklistManager {
     private var settings: Settings
     private var cancellables = Set<AnyCancellable>()
+    private var timer: Timer?
 
     init(settings: Settings) {
         self.settings = settings
+    }
+
+    func start() {
+        timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(settings.updateInterval.rawValue), repeats: true) { [weak self] _ in
+            self?.updateBlocklists()
+        }
+    }
+
+    func stop() {
+        timer?.invalidate()
+        timer = nil
     }
 
     private let parser = BlocklistParser()

@@ -5,11 +5,18 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            Text("Home")
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
+            NavigationView {
+                VStack {
+                    Text("DNSCloak")
+                        .font(.largeTitle)
+                    NavigationLink("Settings", destination: SettingsView())
                 }
+                .navigationTitle("Home")
+            }
+            .tabItem {
+                Image(systemName: "house.fill")
+                Text("Home")
+            }
 
             BlocklistView()
                 .tabItem {

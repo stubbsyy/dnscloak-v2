@@ -19,6 +19,9 @@ class Settings: ObservableObject {
     @Published var blacklist: Set<String> = [] {
         didSet { saveSettings() }
     }
+    @Published var updateInterval: UpdateInterval = .daily {
+        didSet { saveSettings() }
+    }
 
     private let userDefaults: UserDefaults
 
@@ -47,6 +50,9 @@ class Settings: ObservableObject {
         if let encoded = try? encoder.encode(Array(blacklist)) {
             userDefaults.set(encoded, forKey: "blacklist")
         }
+        if let encoded = try? encoder.encode(updateInterval) {
+            userDefaults.set(encoded, forKey: "updateInterval")
+        }
     }
 
     func loadSettings() {
@@ -74,6 +80,10 @@ class Settings: ObservableObject {
         if let data = userDefaults.data(forKey: "blacklist"),
            let decoded = try? decoder.decode([String].self, from: data) {
             blacklist = Set(decoded)
+        }
+        if let data = userDefaults.data(forKey: "updateInterval"),
+           let decoded = try? decoder.decode(UpdateInterval.self, from: data) {
+            updateInterval = decoded
         }
     }
 }
