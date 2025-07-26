@@ -24,9 +24,11 @@ struct AddDNSResolverView: View {
             .navigationBarItems(leading: Button("Cancel") {
                 presentationMode.wrappedValue.dismiss()
             }, trailing: Button("Save") {
-                let newResolver = DNSResolver(name: name, address: address, port: port, protocol: protocolSelection)
-                settings.resolvers.append(newResolver)
-                presentationMode.wrappedValue.dismiss()
+                if settings.resolvers.count < 20 {
+                    let newResolver = DNSResolver(name: name, address: address, port: port, protocol: protocolSelection)
+                    settings.resolvers.append(newResolver)
+                    presentationMode.wrappedValue.dismiss()
+                }
             })
         }
     }

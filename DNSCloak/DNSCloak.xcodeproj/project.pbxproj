@@ -135,6 +135,18 @@
 			};
 			buildConfigurationList = 28B9A5A129B5D88F00E83E45 /* Build configuration list for PBXProject "DNSCloak" */;
 			compatibilityVersion = "Xcode 13.0";
+			dependencies = (
+				{
+					productName = SwiftQuic;
+					repositoryURL = "https://github.com/dmz-vps/SwiftQuic.git";
+					version = "1.0.0";
+				},
+				{
+					productName = DNSCrypt;
+					repositoryURL = "https://github.com/jedisct1/dnscrypt-proxy.git";
+					version = "2.0.45";
+				}
+			);
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

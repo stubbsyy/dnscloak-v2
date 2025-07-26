@@ -26,6 +26,7 @@ struct DNSResolverListView: View {
                                 }
                             }
                         }
+                        .onDelete(perform: delete)
                     }
                 }
             }
@@ -39,6 +40,10 @@ struct DNSResolverListView: View {
                 AddDNSResolverView()
             }
         }
+    }
+
+    func delete(at offsets: IndexSet) {
+        settings.resolvers.remove(atOffsets: offsets)
     }
 }
 
