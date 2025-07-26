@@ -9,18 +9,15 @@ class BlocklistManager {
         self.settings = settings
     }
 
-    func fetchBlocklist(from url: URL) -> AnyPublisher<[String], BlocklistError> {
-        URLSession.shared.dataTaskPublisher(for: url)
+    private let parser = BlocklistParser()
+
+    func fetchBlocklist(from blocklist: Blocklist) -> AnyPublisher<Set<String>, BlocklistError> {
+        URLSession.shared.dataTaskPublisher(for: blocklist.url)
             .mapError { BlocklistError.networkError($0) }
             .map(\.data)
-            .tryMap { data in
-                guard let string = String(data: data, encoding: .utf8) else {
-                    throw BlocklistError.invalidData
-                }
-                return string.components(separatedBy: .newlines)
-                    .filter { !$0.starts(with: "#") && !$0.isEmpty }
+            .map { [weak self] data in
+                self?.parser.parse(data: data, format: blocklist.format) ?? []
             }
-            .mapError { $0 as? BlocklistError ?? .parsingError }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
@@ -28,7 +25,7 @@ class BlocklistManager {
     func updateBlocklists() {
         let publishers = settings.blocklists
             .filter { $0.isEnabled }
-            .map { fetchBlocklist(from: $0.url) }
+            .map { fetchBlocklist(from: $0) }
 
         Publishers.MergeMany(publishers)
             .collect()
@@ -44,8 +41,9 @@ class BlocklistManager {
             .store(in: &cancellables)
     }
 
-    private func combineBlocklists(domains: [[String]]) -> [String] {
-        let combined = domains.flatMap { $0 }
-        return Array(Set(combined))
+    private func combineBlocklists(domains: [Set<String>]) -> Set<String> {
+        return domains.reduce(Set<String>()) { (result, set) in
+            result.union(set)
+        }
     }
 }

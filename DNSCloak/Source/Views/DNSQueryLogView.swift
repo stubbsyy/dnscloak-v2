@@ -31,12 +31,12 @@ struct DNSQueryLogView: View {
                 ActionSheet(title: Text("Add to..."), buttons: [
                     .default(Text("Whitelist")) {
                         if let domain = selectedQuery?.domain {
-                            settings.whitelist.append(domain)
+                            settings.whitelist.insert(domain)
                         }
                     },
                     .default(Text("Blacklist")) {
                         if let domain = selectedQuery?.domain {
-                            settings.blacklist.append(domain)
+                            settings.blacklist.insert(domain)
                         }
                     },
                     .cancel()

@@ -10,13 +10,13 @@ class Settings: ObservableObject {
     @Published var queries: [DNSQuery] = [] {
         didSet { saveSettings() }
     }
-    @Published var combinedBlocklist: [String] = [] {
+    @Published var combinedBlocklist: Set<String> = [] {
         didSet { saveSettings() }
     }
-    @Published var whitelist: [String] = [] {
+    @Published var whitelist: Set<String> = [] {
         didSet { saveSettings() }
     }
-    @Published var blacklist: [String] = [] {
+    @Published var blacklist: Set<String> = [] {
         didSet { saveSettings() }
     }
 
@@ -38,13 +38,13 @@ class Settings: ObservableObject {
         if let encoded = try? encoder.encode(queries) {
             userDefaults.set(encoded, forKey: "queries")
         }
-        if let encoded = try? encoder.encode(combinedBlocklist) {
+        if let encoded = try? encoder.encode(Array(combinedBlocklist)) {
             userDefaults.set(encoded, forKey: "combinedBlocklist")
         }
-        if let encoded = try? encoder.encode(whitelist) {
+        if let encoded = try? encoder.encode(Array(whitelist)) {
             userDefaults.set(encoded, forKey: "whitelist")
         }
-        if let encoded = try? encoder.encode(blacklist) {
+        if let encoded = try? encoder.encode(Array(blacklist)) {
             userDefaults.set(encoded, forKey: "blacklist")
         }
     }
@@ -65,15 +65,15 @@ class Settings: ObservableObject {
         }
         if let data = userDefaults.data(forKey: "combinedBlocklist"),
            let decoded = try? decoder.decode([String].self, from: data) {
-            combinedBlocklist = decoded
+            combinedBlocklist = Set(decoded)
         }
         if let data = userDefaults.data(forKey: "whitelist"),
            let decoded = try? decoder.decode([String].self, from: data) {
-            whitelist = decoded
+            whitelist = Set(decoded)
         }
         if let data = userDefaults.data(forKey: "blacklist"),
            let decoded = try? decoder.decode([String].self, from: data) {
-            blacklist = decoded
+            blacklist = Set(decoded)
         }
     }
 }
