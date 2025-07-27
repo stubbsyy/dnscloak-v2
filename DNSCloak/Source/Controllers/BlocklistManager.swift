@@ -23,8 +23,6 @@ class BlocklistManager {
 
     private let parser = BlocklistParser()
 
-    private let parser = BlocklistParser()
-
     func fetchBlocklist(from blocklist: Blocklist) -> AnyPublisher<Set<String>, BlocklistError> {
         URLSession.shared.dataTaskPublisher(for: blocklist.url)
             .mapError { BlocklistError.networkError($0) }
