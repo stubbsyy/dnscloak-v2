@@ -69,6 +69,47 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+struct SettingsView: View {
+    @EnvironmentObject var settings: Settings
+
+    var body: some View {
+        Form {
+            Section(header: Text(NSLocalizedString("Blocklist", comment: ""))) {
+                Stepper(String(format: NSLocalizedString("Limit: %d", comment: ""), settings.blocklistLimit), value: $settings.blocklistLimit, in: 1000...1000000, step: 1000)
+            }
+            Section(header: Text(NSLocalizedString("Updates", comment: ""))) {
+                Picker(NSLocalizedString("Update Interval", comment: ""), selection: $settings.updateInterval) {
+                    ForEach(UpdateInterval.allCases, id: \.self) { interval in
+                        Text(interval.localizedDescription).tag(interval)
+                    }
+                }
+            }
+        }
+        .navigationTitle(NSLocalizedString("Settings", comment: ""))
+    }
+}
+
+struct TutorialView: View {
+    @Binding var isPresented: Bool
+
+    var body: some View {
+        VStack {
+            Text(NSLocalizedString("Welcome to DNSCloak", comment: ""))
+                .font(.largeTitle)
+                .padding()
+
+            Text(NSLocalizedString("This tutorial will guide you through the main features of the app.", comment: ""))
+                .font(.headline)
+                .padding()
+
+            Button(NSLocalizedString("Get Started", comment: "")) {
+                isPresented = false
+            }
+            .padding()
+        }
+    }
+}
+
 struct SideMenuView: View {
     var body: some View {
         VStack(alignment: .leading) {
@@ -124,8 +165,8 @@ struct SideMenuView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.background)
-        .foregroundColor(.text)
+        .background(Color.white)
+        .foregroundColor(.black)
         .edgesIgnoringSafeArea(.all)
     }
 }
