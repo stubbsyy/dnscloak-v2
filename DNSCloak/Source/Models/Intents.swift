@@ -1,6 +1,8 @@
 import Foundation
 import Intents
 
+class ToggleVPNIntent: INIntent {}
+
 class ToggleVPNIntentResponse: INIntentResponse {
     public var code: ToggleVPNIntentResponseCode = .success
 
