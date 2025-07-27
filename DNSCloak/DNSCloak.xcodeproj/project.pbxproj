@@ -44,6 +44,7 @@
 		28B9A5E629B5D88F00E83E45 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = "file.intentdefinition"; path = "Intents.intentdefinition"; sourceTree = "<group>"; };
 		28B9A5E929B5D88F00E83E45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28B9A5F429B5D88F00E83E45 /* DNSCloakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSCloakUITests.swift; sourceTree = "<group>"; };
+		28B9A5F629B5D88F00E83E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -318,7 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = DNSCloak/Info.plist;
+				INFOPLIST_FILE = DNSCloak/DNSCloak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.DNSCloak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
