@@ -38,12 +38,12 @@
 		28B9A5B529B5D88F00E83E45 /* BlocklistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DNSCloak/Source/Controllers/BlocklistManager.swift"; sourceTree = "<group>"; };
 		28B9A5B729B5D88F00E83E45 /* DNSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DNSCloak/Source/Controllers/DNSManager.swift"; sourceTree = "<group>"; };
 		28B9A5B929B5D88F00E83E45 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DNSCloak/Source/Helpers/Settings.swift"; sourceTree = "<group>"; };
-		28B9A5CA29B5D88F00E83E45 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
-		28B9A5D429B5D88F00E83E45 /* DNSCloakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSCloakTests.swift; sourceTree = "<group>"; };
-		28B9A5E429B5D88F00E83E45 /* DNSCloakWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSCloakWidget.swift; sourceTree = "<group>"; };
-		28B9A5E629B5D88F00E83E45 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = "file.intentdefinition"; path = "Intents.intentdefinition"; sourceTree = "<group>"; };
+		28B9A5CA29B5D88F00E83E45 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DNSCloak/DNSCloakPacketTunnel/PacketTunnelProvider.swift"; sourceTree = "<group>"; };
+		28B9A5D429B5D88F00E83E45 /* DNSCloakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DNSCloak/Tests/DNSCloakTests.swift"; sourceTree = "<group>"; };
+		28B9A5E429B5D88F00E83E45 /* DNSCloakWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DNSCloak/DNSCloakWidget/DNSCloakWidget.swift"; sourceTree = "<group>"; };
+		28B9A5E629B5D88F00E83E45 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = "file.intentdefinition"; path = "DNSCloak/Intents.intentdefinition"; sourceTree = "<group>"; };
 		28B9A5E929B5D88F00E83E45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DNSCloak/Source/Controllers/AppDelegate.swift"; sourceTree = "<group>"; };
-		28B9A5F429B5D88F00E83E45 /* DNSCloakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSCloakUITests.swift; sourceTree = "<group>"; };
+		28B9A5F429B5D88F00E83E45 /* DNSCloakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DNSCloak/Tests/DNSCloakUITests.swift"; sourceTree = "<group>"; };
 		28B9A5F629B5D88F00E83E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -322,6 +322,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.DNSCloak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +339,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.DNSCloak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
