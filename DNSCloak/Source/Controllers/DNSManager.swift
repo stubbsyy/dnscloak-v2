@@ -42,6 +42,6 @@ class DNSManager: ObservableObject {
         } else {
             startVPN()
         }
-        completion(ToggleVPNIntentResponse(code: .success, userActivity: nil))
+        completion(ToggleVPNIntentResponse(code: ToggleVPNIntentResponseCode.success, userActivity: nil))
     }
 }
