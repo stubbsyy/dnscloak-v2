@@ -34,6 +34,7 @@ class DNSManager: ObservableObject {
             if managers.isEmpty {
                 manager = NETunnelProviderManager()
                 manager.protocolConfiguration = NETunnelProviderProtocol()
+                (manager.protocolConfiguration as! NETunnelProviderProtocol).serverAddress = "127.0.0.1"
                 manager.localizedDescription = "DNSCloak"
                 manager.isEnabled = true
             } else {
