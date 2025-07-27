@@ -1,6 +1,7 @@
 import Foundation
 import NetworkExtension
 import Combine
+import Intents
 
 class DNSManager: ObservableObject {
     @Published var vpnStatus: NEVPNStatus = .invalid
