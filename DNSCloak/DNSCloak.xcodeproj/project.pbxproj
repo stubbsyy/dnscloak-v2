@@ -23,6 +23,7 @@
 		28B9A5E529B5D88F00E83E45 /* DNSCloakWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5E429B5D88F00E83E45 /* DNSCloakWidget.swift */; };
 		28B9A5E829B5D88F00E83E45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5E929B5D88F00E83E45 /* AppDelegate.swift */; };
 		28B9A5F529B5D88F00E83E45 /* DNSCloakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5F429B5D88F00E83E45 /* DNSCloakUITests.swift */; };
+		28B9A5F729B5D88F00E83E45 /* BlocklistError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5F829B5D88F00E83E45 /* BlocklistError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		28B9A5E929B5D88F00E83E45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Source/Controllers/AppDelegate.swift"; sourceTree = "<group>"; };
 		28B9A5F429B5D88F00E83E45 /* DNSCloakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tests/DNSCloakUITests.swift"; sourceTree = "<group>"; };
 		28B9A5F629B5D88F00E83E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
+		28B9A5F829B5D88F00E83E45 /* BlocklistError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Source/Models/BlocklistError.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -281,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28B9A5CB29B5D88F00E83E45 /* PacketTunnelProvider.swift in Sources */,
+				28B9A5F729B5D88F00E83E45 /* BlocklistError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
