@@ -22,6 +22,7 @@ public enum ToggleVPNIntentResponseCode: Int {
     case failureRequiringAppLaunch
 }
 
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?

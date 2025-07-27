@@ -1,6 +1,5 @@
 import SwiftUI
 
-@main
 struct DNSCloakApp: App {
     private let settings = Settings()
     private let blocklistManager: BlocklistManager
