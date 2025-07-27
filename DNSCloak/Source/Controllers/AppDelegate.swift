@@ -10,6 +10,10 @@ class ToggleVPNIntentResponse: INIntentResponse {
         self.code = code
         super.init()
     }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 public enum ToggleVPNIntentResponseCode: Int {
