@@ -24,11 +24,43 @@ class DNSManager: ObservableObject {
     }
 
     func startVPN() {
-        // Start the VPN tunnel
+        NETunnelProviderManager.loadAllFromPreferences { (managers, error) in
+            guard let managers = managers, error == nil else {
+                return
+            }
+
+            let manager: NETunnelProviderManager
+            if managers.isEmpty {
+                manager = NETunnelProviderManager()
+                manager.protocolConfiguration = NETunnelProviderProtocol()
+                manager.localizedDescription = "DNSCloak"
+                manager.isEnabled = true
+            } else {
+                manager = managers[0]
+            }
+
+            manager.saveToPreferences { (error) in
+                if let error = error {
+                    print("Error saving VPN configuration: \(error.localizedDescription)")
+                    return
+                }
+
+                do {
+                    try manager.connection.startVPNTunnel()
+                } catch {
+                    print("Error starting VPN tunnel: \(error.localizedDescription)")
+                }
+            }
+        }
     }
 
     func stopVPN() {
-        // Stop the VPN tunnel
+        NETunnelProviderManager.loadAllFromPreferences { (managers, error) in
+            guard let managers = managers, let manager = managers.first, error == nil else {
+                return
+            }
+            manager.connection.stopVPNTunnel()
+        }
     }
 
     func handleDNSRequest(request: Data) -> Data {
@@ -42,6 +74,7 @@ class DNSManager: ObservableObject {
         } else {
             startVPN()
         }
-        completion(ToggleVPNIntentResponse(code: ToggleVPNIntentResponseCode.success, userActivity: nil))
+        let response = ToggleVPNIntentResponse(code: .success, userActivity: nil)
+        completion(response)
     }
 }
