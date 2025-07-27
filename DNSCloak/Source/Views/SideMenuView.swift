@@ -14,7 +14,7 @@ struct SideMenuView: View {
             NavigationLink(destination: ContentView()) {
                 HStack {
                     Image(systemName: "house")
-                    Text("Home")
+                    Text(NSLocalizedString("Home", comment: ""))
                 }
             }
             .padding(.top, 30)
@@ -22,7 +22,7 @@ struct SideMenuView: View {
             NavigationLink(destination: BlocklistView()) {
                 HStack {
                     Image(systemName: "list.bullet")
-                    Text("Blocklists")
+                    Text(NSLocalizedString("Blocklists", comment: ""))
                 }
             }
             .padding(.top, 30)
@@ -30,7 +30,7 @@ struct SideMenuView: View {
             NavigationLink(destination: DNSResolverListView()) {
                 HStack {
                     Image(systemName: "server.rack")
-                    Text("Resolvers")
+                    Text(NSLocalizedString("Resolvers", comment: ""))
                 }
             }
             .padding(.top, 30)
@@ -38,7 +38,7 @@ struct SideMenuView: View {
             NavigationLink(destination: DNSQueryLogView()) {
                 HStack {
                     Image(systemName: "text.magnifyingglass")
-                    Text("Query Log")
+                    Text(NSLocalizedString("Query Log", comment: ""))
                 }
             }
             .padding(.top, 30)
@@ -46,7 +46,7 @@ struct SideMenuView: View {
             NavigationLink(destination: SettingsView()) {
                 HStack {
                     Image(systemName: "gear")
-                    Text("Settings")
+                    Text(NSLocalizedString("Settings", comment: ""))
                 }
             }
             .padding(.top, 30)

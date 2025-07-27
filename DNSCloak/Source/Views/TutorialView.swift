@@ -5,15 +5,15 @@ struct TutorialView: View {
 
     var body: some View {
         VStack {
-            Text("Welcome to DNSCloak")
+            Text(NSLocalizedString("Welcome to DNSCloak", comment: ""))
                 .font(.largeTitle)
                 .padding()
 
-            Text("This tutorial will guide you through the main features of the app.")
+            Text(NSLocalizedString("This tutorial will guide you through the main features of the app.", comment: ""))
                 .font(.headline)
                 .padding()
 
-            Button("Get Started") {
+            Button(NSLocalizedString("Get Started", comment: "")) {
                 isPresented = false
             }
             .padding()

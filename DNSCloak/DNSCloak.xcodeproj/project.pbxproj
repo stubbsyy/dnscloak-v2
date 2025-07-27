@@ -20,6 +20,9 @@
 		28B9A5BA29B5D88F00E83E45 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5B929B5D88F00E83E45 /* Settings.swift */; };
 		28B9A5CB29B5D88F00E83E45 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5CA29B5D88F00E83E45 /* PacketTunnelProvider.swift */; };
 		28B9A5D529B5D88F00E83E45 /* DNSCloakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5D429B5D88F00E83E45 /* DNSCloakTests.swift */; };
+		28B9A5E529B5D88F00E83E45 /* DNSCloakWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5E429B5D88F00E83E45 /* DNSCloakWidget.swift */; };
+		28B9A5E829B5D88F00E83E45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5E929B5D88F00E83E45 /* AppDelegate.swift */; };
+		28B9A5F529B5D88F00E83E45 /* DNSCloakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9A5F429B5D88F00E83E45 /* DNSCloakUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,10 @@
 		28B9A5B929B5D88F00E83E45 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		28B9A5CA29B5D88F00E83E45 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		28B9A5D429B5D88F00E83E45 /* DNSCloakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSCloakTests.swift; sourceTree = "<group>"; };
+		28B9A5E429B5D88F00E83E45 /* DNSCloakWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSCloakWidget.swift; sourceTree = "<group>"; };
+		28B9A5E629B5D88F00E83E45 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = "file.intentdefinition"; path = "Intents.intentdefinition"; sourceTree = "<group>"; };
+		28B9A5E929B5D88F00E83E45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28B9A5F429B5D88F00E83E45 /* DNSCloakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSCloakUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -84,6 +91,7 @@
 				28B9A59C29B5D88F00E83E45 /* Sources */,
 				28B9A59A29B5D88F00E83E45 /* Frameworks */,
 				28B9A59B29B5D88F00E83E45 /* Resources */,
+				28B9A5E729B5D88F00E83E45 /* Generate Inten  ts File */,
 			);
 			buildRules = (
 			);
@@ -114,6 +122,42 @@
 		};
 /* End PBXNativeTarget section */
 
+/* Begin PBXNativeTarget section */
+		28B9A5E029B5D88F00E83E45 /* DNSCloakWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B9A5E329B5D88F00E83E45 /* Build configuration list for PBXNativeTarget "DNSCloakWidget" */;
+			buildPhases = (
+				28B9A5E129B5D88F00E83E45 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNSCloakWidget;
+			productName = DNSCloakWidget;
+			productReference = 28B9A5E229B5D88F00E83E45 /* DNSCloakWidget.appex */;
+			productType = "com.apple.product-type.widgetkit-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXNativeTarget section */
+		28B9A5F029B5D88F00E83E45 /* DNSCloakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B9A5F329B5D88F00E83E45 /* Build configuration list for PBXNativeTarget "DNSCloakUITests" */;
+			buildPhases = (
+				28B9A5F129B5D88F00E83E45 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNSCloakUITests;
+			productName = DNSCloakUITests;
+			productReference = 28B9A5F229B5D88F00E83E45 /* DNSCloakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
 		28B9A5A029B5D88F00E83E45 /* Project object */ = {
 			isa = PBXProject;
@@ -127,6 +171,9 @@
 								enabled = 1;
 							};
 							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
 								enabled = 1;
 							};
 						};
@@ -145,6 +192,11 @@
 					productName = DNSCrypt;
 					repositoryURL = "https://github.com/jedisct1/dnscrypt-proxy.git";
 					version = "2.0.45";
+				},
+				{
+					productName = "SwiftBloomFilter";
+					repositoryURL = "https://github.com/your-username/SwiftBloomFilter.git";
+					version = "1.0.0";
 				}
 			);
 			developmentRegion = en;
@@ -161,6 +213,8 @@
 				28B9A59F29B5D88F00E83E45 /* DNSCloak */,
 				28B9A5C629B5D88F00E83E45 /* DNSCloakPacketTunnel */,
 				28B9A5D029B5D88F00E83E45 /* DNSCloakTests */,
+				28B9A5E029B5D88F00E83E45 /* DNSCloakWidget */,
+				28B9A5F029B5D88F00E83E45 /* DNSCloakUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +237,25 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28B9A5E729B5D88F00E83E45 /* Generate Intents File */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/DNSCloak/Intents.intentdefinition",
+			);
+			name = "Generate Intents File";
+			outputPaths = (
+				"$(SRCROOT)/DNSCloak/Intents.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xctoolchain-select -p\n/usr/bin/xcrun --sdk iphoneos com.apple.siri.intent.definition.generator --swift-output-file $(SRCROOT)/DNSCloak/Intents.swift $(SRCROOT)/DNSCloak/Intents.intentdefinition\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28B9A59C29B5D88F00E83E45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -199,6 +272,7 @@
 				28B9A5B629B5D88F00E83E45 /* BlocklistManager.swift in Sources */,
 				28B9A5B829B5D88F00E83E45 /* DNSManager.swift in Sources */,
 				28B9A5BA29B5D88F00E83E45 /* Settings.swift in Sources */,
+				28B9A5E829B5D88F00E83E45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +289,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				28B9A5D529B5D88F00E83E45 /* DNSCloakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B9A5E129B5D88F00E83E45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B9A5E529B5D88F00E83E45 /* DNSCloakWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B9A5F129B5D88F00E83E45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B9A5F529B5D88F00E83E45 /* DNSCloakUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

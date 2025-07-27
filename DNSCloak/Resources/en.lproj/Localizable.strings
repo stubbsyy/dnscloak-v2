@@ -1,0 +1,57 @@
+/*
+  Localizable.strings
+  DNSCloak
+
+  Created by Jules on 26/07/2025.
+
+*/
+
+"Home" = "Home";
+"Blocklists" = "Blocklists";
+"Resolvers" = "Resolvers";
+"Query Log" = "Query Log";
+"Settings" = "Settings";
+"Add Blocklist" = "Add Blocklist";
+"Add DNS Resolver" = "Add DNS Resolver";
+"Update Interval" = "Update Interval";
+"Limit" = "Limit";
+"No blocklists." = "No blocklists.";
+"No DNS resolvers." = "No DNS resolvers.";
+"No DNS queries yet." = "No DNS queries yet.";
+"Welcome to DNSCloak" = "Welcome to DNSCloak";
+"This tutorial will guide you through the main features of the app." = "This tutorial will guide you through the main features of the app.";
+"Get Started" = "Get Started";
+"Add to..." = "Add to...";
+"Whitelist" = "Whitelist";
+"Blacklist" = "Blacklist";
+"Cancel" = "Cancel";
+"Save" = "Save";
+"Name" = "Name";
+"URL" = "URL";
+"Address" = "Address";
+"Port" = "Port";
+"Protocol" = "Protocol";
+"Error" = "Error";
+"An unknown error occurred." = "An unknown error occurred.";
+"The provided URL is invalid." = "The provided URL is invalid.";
+"A network error occurred: %@" = "A network error occurred: %@";
+"The data received from the server was invalid." = "The data received from the server was invalid.";
+"An error occurred while parsing the blocklist." = "An error occurred while parsing the blocklist.";
+"Every 24 hours" = "Every 24 hours";
+"Every week" = "Every week";
+"Show Menu" = "Show Menu";
+"DNSCloak" = "DNSCloak";
+"DNSCloakPacketTunnel" = "DNSCloakPacketTunnel";
+"Standard" = "Standard";
+"HTTPS" = "HTTPS";
+"TLS" = "TLS";
+"QUIC" = "QUIC";
+"DNSCrypt" = "DNSCrypt";
+"Adblock" = "Adblock";
+"Hosts" = "Hosts";
+"Test Blocklist" = "Test Blocklist";
+"Test Resolver" = "Test Resolver";
+"Fetch blocklist" = "Fetch blocklist";
+"Fetch blocklist with error" = "Fetch blocklist with error";
+"Failed to fetch blocklist: %@" = "Failed to fetch blocklist: %@";
+"Expected an error" = "Expected an error";

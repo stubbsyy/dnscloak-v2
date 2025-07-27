@@ -11,19 +11,19 @@ struct AddDNSResolverView: View {
     var body: some View {
         NavigationView {
             Form {
-                TextField("Name", text: $name)
-                TextField("Address", text: $address)
-                Stepper("Port: \(port)", value: $port, in: 1...65535)
-                Picker("Protocol", selection: $protocolSelection) {
+                TextField(NSLocalizedString("Name", comment: ""), text: $name)
+                TextField(NSLocalizedString("Address", comment: ""), text: $address)
+                Stepper(String(format: NSLocalizedString("Port: %d", comment: ""), port), value: $port, in: 1...65535)
+                Picker(NSLocalizedString("Protocol", comment: ""), selection: $protocolSelection) {
                     ForEach(DNSProtocol.allCases, id: \.self) { proto in
                         Text(proto.rawValue.uppercased())
                     }
                 }
             }
-            .navigationTitle("Add DNS Resolver")
-            .navigationBarItems(leading: Button("Cancel") {
+            .navigationTitle(NSLocalizedString("Add DNS Resolver", comment: ""))
+            .navigationBarItems(leading: Button(NSLocalizedString("Cancel", comment: "")) {
                 presentationMode.wrappedValue.dismiss()
-            }, trailing: Button("Save") {
+            }, trailing: Button(NSLocalizedString("Save", comment: "")) {
                 if settings.resolvers.count < 20 {
                     let newResolver = DNSResolver(name: name, address: address, port: port, protocol: protocolSelection)
                     settings.resolvers.append(newResolver)

@@ -27,7 +27,7 @@ struct BlocklistView: View {
                     ProgressView()
                 }
             }
-            .navigationTitle("Blocklists")
+            .navigationTitle(NSLocalizedString("Blocklists", comment: ""))
             .navigationBarItems(trailing: Button(action: {
                 showingAddBlocklist = true
             }) {
@@ -38,8 +38,8 @@ struct BlocklistView: View {
             }
             .alert(isPresented: $showError) {
                 Alert(
-                    title: Text("Error"),
-                    message: Text(error?.localizedDescription ?? "An unknown error occurred."),
+                    title: Text(NSLocalizedString("Error", comment: "")),
+                    message: Text(error?.localizedDescription ?? NSLocalizedString("An unknown error occurred.", comment: "")),
                     dismissButton: .default(Text("OK"))
                 )
             }

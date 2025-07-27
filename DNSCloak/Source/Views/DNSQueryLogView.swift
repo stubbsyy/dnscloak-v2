@@ -13,7 +13,7 @@ struct DNSQueryLogView: View {
                         .font(.headline)
                         .foregroundColor(.gray)
                 } else {
-                    List(settings.queries) { query in
+                    List(settings.queries.suffix(100)) { query in
                         Button(action: {
                             selectedQuery = query
                             showingActionSheet = true
@@ -26,15 +26,15 @@ struct DNSQueryLogView: View {
                     }
                 }
             }
-            .navigationTitle("DNS Query Log")
+            .navigationTitle(NSLocalizedString("Query Log", comment: ""))
             .actionSheet(isPresented: $showingActionSheet) {
-                ActionSheet(title: Text("Add to..."), buttons: [
-                    .default(Text("Whitelist")) {
+                ActionSheet(title: Text(NSLocalizedString("Add to...", comment: "")), buttons: [
+                    .default(Text(NSLocalizedString("Whitelist", comment: ""))) {
                         if let domain = selectedQuery?.domain {
                             settings.whitelist.insert(domain)
                         }
                     },
-                    .default(Text("Blacklist")) {
+                    .default(Text(NSLocalizedString("Blacklist", comment: ""))) {
                         if let domain = selectedQuery?.domain {
                             settings.blacklist.insert(domain)
                         }

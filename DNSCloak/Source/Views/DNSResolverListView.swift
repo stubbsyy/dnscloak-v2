@@ -8,7 +8,7 @@ struct DNSResolverListView: View {
         NavigationView {
             ZStack {
                 if settings.resolvers.isEmpty {
-                    Text("No DNS resolvers.")
+                    Text(NSLocalizedString("No DNS resolvers.", comment: ""))
                         .font(.headline)
                         .foregroundColor(.gray)
                 } else {
@@ -30,7 +30,7 @@ struct DNSResolverListView: View {
                     }
                 }
             }
-            .navigationTitle("DNS Resolvers")
+            .navigationTitle(NSLocalizedString("Resolvers", comment: ""))
             .navigationBarItems(trailing: Button(action: {
                 showingAddResolver = true
             }) {

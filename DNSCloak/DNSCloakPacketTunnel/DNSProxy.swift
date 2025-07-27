@@ -1,14 +1,21 @@
 import Foundation
 import Network
 
+import SwiftBloomFilter
+
 class DNSProxy {
     private let settings: Settings
     private let systemDNSServers: [String]
     private var connection: NWConnection?
+    private var bloomFilter: BloomFilter<String>
 
     init(settings: Settings, systemDNSServers: [String]) {
         self.settings = settings
         self.systemDNSServers = systemDNSServers
+        self.bloomFilter = BloomFilter<String>(size: 1000000, hashCount: 5)
+        for domain in settings.combinedBlocklist {
+            self.bloomFilter.insert(domain)
+        }
     }
 
     func handlePacket(_ packet: Data) -> Data? {
@@ -25,7 +32,7 @@ class DNSProxy {
             return DNSPacket.blockedResponse(for: packet)
         }
 
-        if settings.combinedBlocklist.contains(domain) {
+        if bloomFilter.contains(domain) {
             return DNSPacket.blockedResponse(for: packet)
         } else {
             forwardQuery(data: packet)

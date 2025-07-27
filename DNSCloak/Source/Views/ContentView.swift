@@ -30,7 +30,7 @@ struct ContentView: View {
                 }
                 .gesture(drag)
             }
-            .navigationBarTitle("DNSCloak", displayMode: .inline)
+            .navigationBarTitle(NSLocalizedString("DNSCloak", comment: ""), displayMode: .inline)
             .navigationBarItems(leading: (
                 Button(action: {
                     withAnimation {
@@ -58,7 +58,7 @@ struct MainView: View {
                self.showingMenu = true
             }
         }) {
-            Text("Show Menu")
+            Text(NSLocalizedString("Show Menu", comment: ""))
         }
     }
 }

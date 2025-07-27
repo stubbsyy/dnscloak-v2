@@ -35,4 +35,13 @@ class DNSManager: ObservableObject {
         // Handle the DNS request and return a response
         return Data()
     }
+
+    func handle(intent: ToggleVPNIntent, completion: @escaping (ToggleVPNIntentResponse) -> Void) {
+        if vpnStatus == .connected {
+            stopVPN()
+        } else {
+            startVPN()
+        }
+        completion(ToggleVPNIntentResponse(code: .success, userActivity: nil))
+    }
 }

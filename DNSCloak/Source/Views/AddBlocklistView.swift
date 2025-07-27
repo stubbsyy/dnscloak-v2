@@ -9,13 +9,13 @@ struct AddBlocklistView: View {
     var body: some View {
         NavigationView {
             Form {
-                TextField("Name", text: $name)
-                TextField("URL", text: $url)
+                TextField(NSLocalizedString("Name", comment: ""), text: $name)
+                TextField(NSLocalizedString("URL", comment: ""), text: $url)
             }
-            .navigationTitle("Add Blocklist")
-            .navigationBarItems(leading: Button("Cancel") {
+            .navigationTitle(NSLocalizedString("Add Blocklist", comment: ""))
+            .navigationBarItems(leading: Button(NSLocalizedString("Cancel", comment: "")) {
                 presentationMode.wrappedValue.dismiss()
-            }, trailing: Button("Save") {
+            }, trailing: Button(NSLocalizedString("Save", comment: "")) {
                 let newBlocklist = Blocklist(name: name, url: URL(string: url)!, isEnabled: true)
                 settings.blocklists.append(newBlocklist)
                 presentationMode.wrappedValue.dismiss()
