@@ -1,4 +1,5 @@
 import UIKit
+import Intents
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,9 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, handle intent: INIntent, completionHandler: @escaping (INIntentResponse) -> Void) {
         if let toggleVPNIntent = intent as? ToggleVPNIntent {
-            dnsManager.handle(intent: toggleVPNIntent) { response in
-                completionHandler(response)
-            }
+            dnsManager.handle(intent: toggleVPNIntent, completion: completionHandler)
         }
     }
 }
