@@ -47,6 +47,7 @@
 		28B9A5F429B5D88F00E83E45 /* DNSCloakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tests/DNSCloakUITests.swift"; sourceTree = "<group>"; };
 		28B9A5F629B5D88F00E83E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
 		28B9A5F829B5D88F00E83E45 /* BlocklistError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Source/Models/BlocklistError.swift"; sourceTree = "<group>"; };
+		28B9A5FA29B5D88F00E83E45 /* Intents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Intents.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -275,6 +276,7 @@
 				28B9A5B829B5D88F00E83E45 /* DNSManager.swift in Sources */,
 				28B9A5BA29B5D88F00E83E45 /* Settings.swift in Sources */,
 				28B9A5E829B5D88F00E83E45 /* AppDelegate.swift in Sources */,
+				28B9A5F929B5D88F00E83E45 /* Intents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
